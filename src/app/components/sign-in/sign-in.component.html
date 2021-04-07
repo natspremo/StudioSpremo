@@ -1,0 +1,76 @@
+<div class="login-page sidebar-collapse">
+    <div class="page-header clear-filter">
+        <div class="page-header-image" style="background-image:url(../assets/img/bg15.jpg)"></div>
+        <div class="content">
+            <div class="container">
+                <div class="col-md-4 ml-auto mr-auto">
+                    <div data-aos-duration="2000" data-aos="fade-up" class="card card-login card-plain">
+                        <div class="card-header text-center">
+                            <div class="logo-container">
+                                <a class="link" routerLink="/homepage-nonreg">
+                                    <h1>Studio Spremo</h1>
+                                </a>
+                            </div>
+                        </div>
+                        <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                            <div class="input-group no-border input-lg form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="now-ui-icons ui-1_email-85"></i>
+                                    </span>
+                                </div>
+                                <input type="text" formControlName="email" id="email" [(ngModel)] = "email"
+                                    class="form-control form-control-success" placeholder="Email">
+
+                                <div class="padding-x"
+                                    *ngIf="reactiveForm.controls.email.invalid && reactiveForm.controls.email.untouched === false">
+                                    <span>
+                                        <i class="fa fa-times x-color"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-group no-border input-lg form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="now-ui-icons ui-1_lock-circle-open"></i>
+                                    </span>
+                                </div>
+                                <input type="password" formControlName="password" id="password" placeholder="Password" [(ngModel)] = "password"
+                                    class="form-control">
+
+                                <div class="padding-x"
+                                    *ngIf="reactiveForm.controls.password.invalid  && reactiveForm.controls.password.untouched === false">
+                                    <span >
+                                        <i class="fa fa-times x-color"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <a class="nav-link login-icons">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                                <a class="nav-link login-icons">
+                                    <i class="fab fa-google-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" [disabled]="!reactiveForm.valid"
+                                    class="btn btn-info btn-round btn-lg btn-block">Prijavi se</button>
+                                <div class="pull-left">
+                                    <h6>
+                                        <a href="/sign-up" class="link">Registruj se</a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-transparent">
+            <!-- <app-footer></app-footer> -->
+        </div>
+    </div>
+</div>
