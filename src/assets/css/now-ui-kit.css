@@ -6697,7 +6697,7 @@ img {
     transition: width .2s linear;
   }
   .sidebar-collapse .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
-    background: #ee0909;
+    background: #888888;
   }
   .sidebar-collapse .top-bar {
     transform: rotate(0);
