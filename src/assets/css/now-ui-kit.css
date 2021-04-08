@@ -27,6 +27,44 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+ .paddCards {
+  padding-top: 5%;
+ }
+
+ .padding-all {
+   padding: 5%;
+ }
+ 
+.heading-39101 
+{
+ position: relative; 
+}
+
+ .heading-39101 .backdrop {
+   line-height: 1;
+   top: -5%;
+   position: absolute;
+   text-transform: uppercase;
+   z-index: -1;
+   font-weight: 900 !important;
+   font-size: 3.5rem;
+   color: #c0c0c0;
+ }
+
+.heading-39101 .backdrop.text-center 
+{
+     left: 50%;
+     -webkit-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     transform: translateX(-50%); 
+}
+
+.subtitle-39191 {
+ color: #2CA8FF;
+ text-transform: uppercase;
+ font-size: 20px;
+ font-weight: bold; }
+
  .sign-up {
   margin-top: 5% !important;
  }
@@ -3628,7 +3666,7 @@ p {
 .description,
 .card-description,
 .footer-big p {
-  color: #9A9A9A;
+  color: #696969;
   font-weight: 300;
 }
 
@@ -4541,7 +4579,7 @@ Created using IcoMoon - icomoon.io
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   min-height: 53px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -5445,21 +5483,40 @@ img {
   opacity: 1;
 }
 
+.carousel .carousel-indicators li {
+  width: .825rem;
+  height: .825rem;
+  cursor: pointer;
+  border-radius: 50%;
+ }
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
-  display: block;
+  
 }
-
+.carCaptionAllign
+{
+  margin-top: 0.1rem;
+}
 .carousel .carousel-inner {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
   border-radius: 0.1875rem;
+  max-height: 500px;
 }
+
+.carousel-caption {
+  top:10%;
+  text-align:center;
+  vertical-align: bottom;
+ }
 
 .carousel .card {
   max-width: 650px;
-  margin: 60px auto;
+  margin: 0px;
+  padding: 0%;
   display: block;
+  height: 100px;
 }
 
 .footer {
@@ -5860,7 +5917,7 @@ img {
 }
 
 .login-page .card-login .input-group:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .login-page .card-login.card-plain .form-control::-moz-placeholder {
@@ -6640,7 +6697,7 @@ img {
     transition: width .2s linear;
   }
   .sidebar-collapse .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
-    background: #888888;
+    background: #ee0909;
   }
   .sidebar-collapse .top-bar {
     transform: rotate(0);

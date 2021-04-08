@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HomepageAdminComponent } from './components/homepage/homepage-admin/homepage-admin.component';
 import { HomepageNonregComponent } from './components/homepage/homepage-nonreg/homepage-nonreg.component';
 import { HomepageRegUserComponent } from './components/homepage/homepage-reg-user/homepage-reg-user.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "sign-up",
     component: SignUpComponent
+  },
+  {
+    path: "contact-us",
+    component: ContactUsComponent
   }
 ];
 

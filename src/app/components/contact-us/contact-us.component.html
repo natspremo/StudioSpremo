@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div class="pt-3"></div>
+<div class="container heading-39101 " style="text-align: center;">
+    <span class="backdrop text-center">Kontaktirajte</span>
+    <span class="subtitle-39191">nas</span>
+
+</div>
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-5 ml-auto mr-auto">
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                <label>Vaše ime</label>
+                <div class="input-group no-border">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="now-ui-icons users_circle-08"></i></span>
+                    </div>
+                    <input type="text" formControlName="name" id="name" [(ngModel)]="name" class="form-control"
+                        placeholder="Ime...">
+                </div>
+                <label>Email adresa</label>
+                <div class="input-group no-border">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                    </div>
+                    <input type="email" formControlName="email" id="email" [(ngModel)]="email" class="form-control"
+                        placeholder="example@gmail.com">
+                </div>
+                <label>Broj telefona</label>
+                <div class="input-group no-border">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="now-ui-icons tech_mobile"></i></span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="phone" id="phone" [(ngModel)]="phone"
+                        placeholder="063333333">
+                </div>
+                <div class="form-group no-border">
+                    <label>Vaša poruka</label>
+                    <textarea name="text" formControlName="testMessage" id="testMessage" [(ngModel)]="testMessage"
+                        class="form-control" rows="6" placeholder="Vaša poruka..."></textarea>
+                </div>
+                <div class="submit text-center">
+                    <input type="submit" [disabled]="!reactiveForm.valid" class="btn btn-info btn-raised btn-round"
+                        value="Pošalji">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4 ml-auto mr-auto">
+            <div class="info info-horizontal ">
+
+                <div class="description">
+                    <h4 style="font-weight: 500;"> <i class="now-ui-icons location_pin"></i> &nbsp;Nađite nas u kancelarijama
+                    </h4>
+                    <p class="font-weight-normal"> Vladike Ćirića, 31,<br>
+                        21000 Novi Sad, 
+                        Srbija
+                    </p>
+                </div>
+            </div>
+            <div class="info info-horizontal">
+
+                <div class="description">
+                    <h4 style="font-weight: 500;"> <i class="now-ui-icons tech_mobile"></i> &nbsp; Pozovite nas</h4>
+                    <p class="font-weight-normal"> Slobodan Spremo<br>
+                        +381 021 493 456<br>
+                        Pon - Pet, 8:00-16:00<br>
+                        Subota, 8:00-12:00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

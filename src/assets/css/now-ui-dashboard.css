@@ -1709,8 +1709,10 @@ fieldset[disabled] .btn-link.active {
 .input-group .form-control:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child) {
   border-radius: 30px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
   border-left: 0 none;
 }
 
@@ -5407,9 +5409,9 @@ Created using IcoMoon - icomoon.io
 }
 
 @media screen and (min-width: 992px) {
-  .navbar-collapse {
+  /* .navbar-collapse {
     background: none !important;
-  }
+  } */
 
   .navbar .navbar-toggle {
     display: none;

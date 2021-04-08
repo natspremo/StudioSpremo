@@ -19,12 +19,12 @@
                                         <i class="now-ui-icons ui-1_email-85"></i>
                                     </span>
                                 </div>
-                                <input type="text" formControlName="email" id="email" [(ngModel)] = "email"
+                                <input type="text" formControlName="email" id="email" [(ngModel)]="email"
                                     class="form-control form-control-success" placeholder="Email">
 
-                                <div class="padding-x"
+                                <div class="input-group-append"
                                     *ngIf="reactiveForm.controls.email.invalid && reactiveForm.controls.email.untouched === false">
-                                    <span>
+                                    <span class="input-group-text">
                                         <i class="fa fa-times x-color"></i>
                                     </span>
                                 </div>
@@ -35,12 +35,12 @@
                                         <i class="now-ui-icons ui-1_lock-circle-open"></i>
                                     </span>
                                 </div>
-                                <input type="password" formControlName="password" id="password" placeholder="Password" [(ngModel)] = "password"
-                                    class="form-control">
+                                <input type="password" formControlName="password" id="password" placeholder="Password"
+                                    [(ngModel)]="password" class="form-control">
 
-                                <div class="padding-x"
-                                    *ngIf="reactiveForm.controls.password.invalid  && reactiveForm.controls.password.untouched === false">
-                                    <span >
+                                <div class="input-group-append"
+                                    *ngIf="reactiveForm.controls.password.invalid && reactiveForm.controls.password.untouched === false">
+                                    <span class="input-group-text">
                                         <i class="fa fa-times x-color"></i>
                                     </span>
                                 </div>

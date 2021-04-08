@@ -12,6 +12,12 @@ import { NavbarAdminComponent } from './components/navbar/navbar-admin/navbar-ad
 import { HomepageAdminComponent } from './components/homepage/homepage-admin/homepage-admin.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CarouselComponent } from './components/homepage/carousel/carousel.component';
+import { HomepageDataComponent } from './components/homepage/homepage-data/homepage-data.component';
+import { TnavbarNonregComponent } from './components/navbar-transparent/tnavbar-nonreg/tnavbar-nonreg.component';
+import { TnavbarRegComponent } from './components/navbar-transparent/tnavbar-reg/tnavbar-reg.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,13 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     NavbarAdminComponent,
     HomepageAdminComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    ContactUsComponent,
+    FooterComponent,
+    CarouselComponent,
+    HomepageDataComponent,
+    TnavbarNonregComponent,
+    TnavbarRegComponent
   ],
   imports: [
     BrowserModule,
