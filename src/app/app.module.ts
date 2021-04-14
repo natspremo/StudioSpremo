@@ -18,6 +18,8 @@ import { CarouselComponent } from './components/homepage/carousel/carousel.compo
 import { HomepageDataComponent } from './components/homepage/homepage-data/homepage-data.component';
 import { TnavbarNonregComponent } from './components/navbar-transparent/tnavbar-nonreg/tnavbar-nonreg.component';
 import { TnavbarRegComponent } from './components/navbar-transparent/tnavbar-reg/tnavbar-reg.component';
+import { NewFlexoJobComponent } from './components/new-flexo-job/new-flexo-job.component';
+import { NewOffsetJobComponent } from './components/new-offset-job/new-offset-job.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { TnavbarRegComponent } from './components/navbar-transparent/tnavbar-reg
     CarouselComponent,
     HomepageDataComponent,
     TnavbarNonregComponent,
-    TnavbarRegComponent
+    TnavbarRegComponent,
+    NewFlexoJobComponent,
+    NewOffsetJobComponent
   ],
   imports: [
     BrowserModule,
