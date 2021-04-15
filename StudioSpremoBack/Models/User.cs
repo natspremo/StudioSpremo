@@ -10,8 +10,6 @@ namespace StudioSpremoBack.Models
 {
   public class User : IdentityUser
   {
-    [Key]
-    public string Id { get; set; }
     public virtual int RoleId
     {
       get

@@ -10,8 +10,6 @@ namespace StudioSpremoBack.Models
 {
   public class Client : IdentityUser
   {
-    [Key]
-    public string Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
     public string AddressId { get; set; }
