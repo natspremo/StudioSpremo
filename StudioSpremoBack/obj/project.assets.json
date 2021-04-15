@@ -12091,11 +12091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Natasas\\Desktop\\CTP Studio Spremo\\StudioSpremoBack\\StudioSpremoBack.csproj",
+      "projectUniqueName": "C:\\Users\\Natasas\\Desktop\\CTP Studio Spremo\\StudioSpremo\\StudioSpremoBack\\StudioSpremoBack.csproj",
       "projectName": "StudioSpremoBack",
-      "projectPath": "C:\\Users\\Natasas\\Desktop\\CTP Studio Spremo\\StudioSpremoBack\\StudioSpremoBack.csproj",
+      "projectPath": "C:\\Users\\Natasas\\Desktop\\CTP Studio Spremo\\StudioSpremo\\StudioSpremoBack\\StudioSpremoBack.csproj",
       "packagesPath": "C:\\Users\\Natasas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Natasas\\Desktop\\CTP Studio Spremo\\StudioSpremoBack\\obj\\",
+      "outputPath": "C:\\Users\\Natasas\\Desktop\\CTP Studio Spremo\\StudioSpremo\\StudioSpremoBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
