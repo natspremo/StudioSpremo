@@ -7,16 +7,12 @@ using System.Threading.Tasks;
 
 namespace StudioSpremoBack.Models
 {
-  public class JobFlexo
+  public class JobFlexo : Job
   {
-    [Key]
-    public string Id { get; set; }
     public string PolymerThicknessId { get; set; }
     [ForeignKey("PolymerThicknessId")]
     public virtual PolymerThickness PolymerThickness { get; set; }
-    public string JobId { get; set; }
-    [ForeignKey("JobId")]
-    public virtual Job Job { get; set; }
+    public virtual ICollection<FilesFlexo> FilePaths { get; set; }
     public DateTime OrderedTime { get; set; }
     public string MaterialType { get; set; }
     public bool Montage { get; set; }

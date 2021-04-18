@@ -2,6 +2,7 @@ using StudioSpremoBack.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,7 +28,6 @@ namespace StudioSpremoBack.Models
     public DateTime OrderedTime { get; set; }
     public string RadniNalog { get; set; }      // tata dodaje sam nalog (kada pravi otpremnicu)
     public string JobName { get; set; }
-    public string[] FilePath { get; set; }      //niz putanja do fajlova na serveru
     public string Note { get; set; }
     public int Liniature { get; set; }
     public bool IsDone { get; set; }

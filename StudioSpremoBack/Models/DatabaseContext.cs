@@ -21,6 +21,10 @@ namespace StudioSpremoBack.Models
     public DbSet<PolymerThickness> PolymerThicknesses { get; set; }
     public DbSet<PlateDimension> PlateDimensions { get; set; }
     public DbSet<User> Staff { get; set; }
+    public DbSet<JobOffset> JobsOffset { get; set; }
+    public DbSet<JobFlexo> JobsFlexo { get; set; }
+    public DbSet<FilesOffset> FilesOffset { get; set; }
+    public DbSet<FilesFlexo> FilesFlexo { get; set; }
 
   }
 

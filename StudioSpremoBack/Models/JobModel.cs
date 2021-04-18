@@ -24,7 +24,6 @@ namespace StudioSpremoBack.Models
     public string RadniNalog { get; set; }
     public string JobName { get; set; }
     public DateTime OrderedTime { get; set; }
-    public string[] FilePath { get; set; }
     public string Note { get; set; }
     public int Liniature { get; set; }
     public bool IsDone { get; set; }

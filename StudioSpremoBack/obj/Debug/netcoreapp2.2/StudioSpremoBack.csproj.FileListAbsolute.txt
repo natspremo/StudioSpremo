@@ -1,0 +1,16 @@
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\StudioSpremoBack.deps.json
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\StudioSpremoBack.runtimeconfig.json
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\StudioSpremoBack.runtimeconfig.dev.json
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\StudioSpremoBack.dll
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\bin\Debug\netcoreapp2.2\StudioSpremoBack.pdb
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.csprojAssemblyReference.cache
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.RazorAssemblyInfo.cache
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.RazorAssemblyInfo.cs
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.AssemblyInfoInputs.cache
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.AssemblyInfo.cs
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.RazorTargetAssemblyInfo.cache
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.dll
+C:\Users\Natasas\Desktop\CTP Studio Spremo\StudioSpremo\StudioSpremoBack\obj\Debug\netcoreapp2.2\StudioSpremoBack.pdb
