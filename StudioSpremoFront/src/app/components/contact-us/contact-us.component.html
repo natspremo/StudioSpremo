@@ -35,7 +35,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 mr-auto ml-auto ">
+        <div class="col-md-6 ml-auto ">
             <h2 class="text-center title">Radno vreme</h2>
             <h4 class="text-center description">
                 <table class="table">
@@ -98,56 +98,18 @@
                 </table>
             </h4>
         </div>
-    </div>
-</div>
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-                <h2 class="text-center title">Postavite pitanje</h2>
-                <h4 class="text-center description">Ukoliko imate nedoumice budite slobodni da nas kontaktirate putem
-                    maila.
-                </h4>
-                <form class="contact-form" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" autocomplete="off">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="bmd-label-floating">Vaše ime</label>
-                                <input type="text" class="form-control" formControlName="name" id="name"
-                                    [(ngModel)]="name">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="bmd-label-floating">Vaš Email</label>
-                                <input type="email" class="form-control" formControlName="email" id="email"
-                                    [(ngModel)]="email">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="bmd-label-floating">Vaš broj telefona</label>
-                                <input type="number" class="form-control" class="form-control" formControlName="phone"
-                                    id="phone" [(ngModel)]="phone">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleMessage" class="bmd-label-floating">Vaša poruka</label>
-                        <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 ml-auto mr-auto text-center">
-                            <button type="submit" class="btn btn-primary btn-raised" [disabled]="!reactiveForm.valid">
-                                Pošalji
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+        <div class="col-md-6 mr-auto text-center">
+            <h2 class="title">
+                Kontakt telefon
+            </h2>
+            <h4>
+                <i class="material-icons p-1">phone</i>
+                021493456
+            </h4>
         </div>
     </div>
 </div>
+
 <!--
         <div class="col-md-4 ml-auto mr-auto">
             <div class="info info-horizontal ">

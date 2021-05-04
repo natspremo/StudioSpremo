@@ -20,119 +20,150 @@
 
         </div>
         <div class="separator separator-primary"></div>
-        <div class="section-story-overview">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="image-container image-left"
-                        style="background-image: url('../assets/img/thrownforaloupe.jpg')">
-                        <!-- First image on the left side -->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="text-center title">Postavite pitanje</h2>
+                        <h4 class="text-center description">Ukoliko imate nedoumice budite slobodni da nas kontaktirate
+                            putem
+                            maila.
+                        </h4>
+                        <form class="contact-form" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()"
+                            autocomplete="off">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Vaše ime</label>
+                                        <input type="text" class="form-control" formControlName="name" id="name"
+                                            [(ngModel)]="name">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Vaš Email</label>
+                                        <input type="email" class="form-control" formControlName="email" id="email"
+                                            [(ngModel)]="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Vaš broj telefona</label>
+                                        <input type="number" class="form-control" class="form-control"
+                                            formControlName="phone" id="phone" [(ngModel)]="phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleMessage" class="bmd-label-floating">Vaša poruka</label>
+                                <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 ml-auto mr-auto text-center">
+                                    <button type="submit" class="btn btn-primary btn-raised"
+                                        [disabled]="!reactiveForm.valid">
+                                        Pošalji
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <!-- Second image on the left side of the article -->
-                    <div class="image-container" style="background-image: url('../assets/img/bg15.jpg')"></div>
-                </div>
-                <div class="col-md-5">
-                    <!-- First image on the right side, above the article -->
-                    <div class="image-container image-right"
-                        style="background-image: url('../assets/img/digitalprint.jpeg')">
-                    </div>
-                    <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
-                    <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer,
-                        and
-                        that process will continue whatever happens with climate change. Even if the Arctic
-                        continues to be one of the fastest-warming regions of the world, it will always be
-                        plunged
-                        into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural
-                        reasons, there’s huge variety of the state of the ice.
-                    </p>
-                    <p>
-                        For a start, it does not automatically follow that a record amount of ice will melt this
-                        summer. More important for determining the size of the annual thaw is the state of the
-                        weather as the midnight sun approaches and temperatures rise. But over the more than 30
-                        years of satellite records, scientists have observed a clear pattern of decline,
-                        decade-by-decade.
-                    </p>
-                    <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer,
-                        and
-                        that process will continue whatever happens with climate change. Even if the Arctic
-                        continues to be one of the fastest-warming regions of the world, it will always be
-                        plunged
-                        into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural
-                        reasons, there’s huge variety of the state of the ice.
-                    </p>
                 </div>
             </div>
         </div>
     </div>
 
+
     <div class="section section-team text-center">
         <div class="container">
-            <h2 class="title">Here is our team</h2>
+            <h2 class="title">Ovo je naš tim</h2>
             <div class="team">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="team-player">
                             <div class="card card-plain">
                                 <div class="col-md-6 ml-auto mr-auto">
-                                  <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image"
+                                        class="img-raised rounded-circle img-fluid">
                                 </div>
                                 <h4 class="card-title">Gigi Hadid
-                                  <br>
-                                  <small class="card-description text-muted">Model</small>
+                                    <br>
+                                    <small class="card-description text-muted">Model</small>
                                 </h4>
                                 <div class="card-body">
-                                  <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                                    <p class="card-description">You can write here details about one of your team
+                                        members.
+                                        You can give more details about what they do. Feel free to add some
+                                        <a href="#">links</a> for people to be able to follow them outside the site.
+                                    </p>
                                 </div>
                                 <div class="card-footer justify-content-center">
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-twitter"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-instagram"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-facebook-square"></i></a>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="team-player">
                             <div class="card card-plain">
                                 <div class="col-md-6 ml-auto mr-auto">
-                                  <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image"
+                                        class="img-raised rounded-circle img-fluid">
                                 </div>
                                 <h4 class="card-title">Gigi Hadid
-                                  <br>
-                                  <small class="card-description text-muted">Model</small>
+                                    <br>
+                                    <small class="card-description text-muted">Model</small>
                                 </h4>
                                 <div class="card-body">
-                                  <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                                    <p class="card-description">You can write here details about one of your team
+                                        members.
+                                        You can give more details about what they do. Feel free to add some
+                                        <a href="#">links</a> for people to be able to follow them outside the site.
+                                    </p>
                                 </div>
                                 <div class="card-footer justify-content-center">
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-twitter"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-instagram"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-facebook-square"></i></a>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="team-player">
                             <div class="card card-plain">
                                 <div class="col-md-6 ml-auto mr-auto">
-                                  <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image"
+                                        class="img-raised rounded-circle img-fluid">
                                 </div>
                                 <h4 class="card-title">Gigi Hadid
-                                  <br>
-                                  <small class="card-description text-muted">Model</small>
+                                    <br>
+                                    <small class="card-description text-muted">Model</small>
                                 </h4>
                                 <div class="card-body">
-                                  <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                                    <p class="card-description">You can write here details about one of your team
+                                        members.
+                                        You can give more details about what they do. Feel free to add some
+                                        <a href="#">links</a> for people to be able to follow them outside the site.
+                                    </p>
                                 </div>
                                 <div class="card-footer justify-content-center">
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                  <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-twitter"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-instagram"></i></a>
+                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i
+                                            class="fa fa-facebook-square"></i></a>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
