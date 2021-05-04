@@ -1,76 +1,47 @@
 <div class="login-page sidebar-collapse">
-    <div class="page-header clear-filter">
-        <div class="page-header-image" style="background-image:url(../assets/img/bg15.jpg)"></div>
-        <div class="content">
-            <div class="container">
-                <div class="col-md-4 ml-auto mr-auto">
-                    <div data-aos-duration="2000" data-aos="fade-up" class="card card-login card-plain">
-                        <div class="card-header text-center">
-                            <div class="logo-container">
-                                <a class="link" routerLink="/homepage-nonreg">
-                                    <h1>Studio Spremo</h1>
-                                </a>
-                            </div>
-                        </div>
+    <app-tnavbar-nonreg></app-tnavbar-nonreg>
+    <div class="page-header header-filter"
+        style="background-image: url('../assets/img/bg15.jpg'); background-size: cover; background-position: top center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                    <div class="card card-login">
                         <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" autocomplete="off">
-                            <div class="input-group no-border input-lg form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="now-ui-icons ui-1_email-85"></i>
-                                    </span>
+                            <div class="card-header card-header-primary text-center">
+                                <h4 class="card-title">Prijavi se</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">mail</i>
+                                        </span>
+                                    </div>
+                                    <input type="email" class="form-control" formControlName="email" id="email"
+                                        [(ngModel)]="email" placeholder="Email...">
                                 </div>
-                                <input type="text" formControlName="email" id="email" [(ngModel)]="email"
-                                    class="form-control form-control-success" placeholder="Email">
-
-                                <div class="input-group-append"
-                                    *ngIf="reactiveForm.controls.email.invalid && reactiveForm.controls.email.untouched === false">
-                                    <span class="input-group-text">
-                                        <i class="fa fa-times x-color"></i>
-                                    </span>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">lock_outline</i>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="form-control" formControlName="password" id="password"
+                                        [(ngModel)]="password" placeholder="Password...">
                                 </div>
                             </div>
-                            <div class="input-group no-border input-lg form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="now-ui-icons ui-1_lock-circle-open"></i>
-                                    </span>
-                                </div>
-                                <input type="password" formControlName="password" id="password" placeholder="Password"
-                                    [(ngModel)]="password" class="form-control">
-
-                                <div class="input-group-append"
-                                    *ngIf="reactiveForm.controls.password.invalid && reactiveForm.controls.password.untouched === false">
-                                    <span class="input-group-text">
-                                        <i class="fa fa-times x-color"></i>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="row d-flex align-items-center justify-content-center">
-                                <a class="nav-link login-icons">
-                                    <i class="fab fa-facebook-square"></i>
-                                </a>
-                                <a class="nav-link login-icons">
-                                    <i class="fab fa-google-plus"></i>
-                                </a>
-                            </div>
-                            <div class="card-footer text-center">
-                                <button type="submit" [disabled]="!reactiveForm.valid"
-                                    class="btn btn-info btn-round btn-lg btn-block">Prijavi se</button>
-                                <div class="pull-left">
-                                    <h6>
-                                        <a href="/sign-up" class="link">Registruj se</a>
-                                    </h6>
-                                </div>
+                            <div class="footerDone text-center">
+                                <button href="#pablo" type="submit" [disabled]="!reactiveForm.valid"
+                                    class="btn btn-primary btn-link btn-wd btn-lg">Gotovo</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-transparent">
-            <!-- <app-footer></app-footer> -->
-        </div>
+    </div>
+
+    <div class="footer-transparent">
+        <app-footer></app-footer>
     </div>
 </div>

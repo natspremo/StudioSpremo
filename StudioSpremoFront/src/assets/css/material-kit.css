@@ -17403,6 +17403,14 @@ footer .pull-center {
   z-index: 2;
 }
 
+.login-page .footerDone {
+  width: 100%;
+  background: transparent;
+  bottom: 0;
+  color: #ffffff;
+  z-index: 2;
+}
+
 .login-page .footer .copyright a {
   color: #ffffff;
 }
