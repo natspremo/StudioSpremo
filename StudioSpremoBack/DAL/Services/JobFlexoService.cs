@@ -49,6 +49,7 @@ namespace StudioSpremoBack.DAL.Services
       List<Object> _jobs = new List<Object>();
       foreach (var job in jobs)
       {
+        //ubaci prepoznavanje service-a preko njegovog id-a (broj iz enuma)
         var temp_job = new      // nije ubacen file paths
         {
           job.JobName,

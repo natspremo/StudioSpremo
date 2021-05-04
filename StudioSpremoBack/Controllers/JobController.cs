@@ -37,5 +37,20 @@ namespace StudioSpremoBack.Controllers
         throw ex;
       }
     }
+
+    [HttpGet]
+    [Route("GetFlexoJobs")]
+    public async Task<List<Object>> GetFlexoJobs()
+    {
+      _unitOfWork = new UnitOfWork(_context);
+      try
+      {
+        var result = _unitOfWork.JobFlexoService.GetAllJobs();
+        return result;
+      } catch(Exception ex)
+      {
+        throw ex;
+      }
+    }
   }
 }
