@@ -1,58 +1,163 @@
 <app-navbar></app-navbar>
-<div class="pt-3"></div>
-<div class="container heading-39101 " style="text-align: center;">
-    <span class="backdrop text-center">Kontaktirajte</span>
-    <span class="subtitle-39191">nas</span>
 
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ml-auto mr-auto text-center">
+                <h2 class="text-center title">Nađite nas u kancelarijama</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ml-auto text-center">
+                <h3 class="title">
+                    Kancelarije za offset štampu
+                </h3>
+                <h4>
+                    Vladike Ćirića 31,<br>
+                    21000 Novi Sad,
+                    Srbija
+                </h4>
+            </div>
+            <div class="col-md-6 mr-auto text-center">
+                <h3 class="title">
+                    Kancelarije za flexo štampu
+                </h3>
+                <h4>
+                    Novosadski put 57, <br>
+                    21000 Novi Sad,
+                    Srbija
+                </h4>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="container pt-5">
+<div class="container">
     <div class="row">
-        <div class="col-md-5 ml-auto mr-auto">
-            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" autocomplete="off">
-                <label>Vaše ime</label>
-                <div class="input-group no-border">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="now-ui-icons users_circle-08"></i></span>
-                    </div>
-                    <input type="text" formControlName="name" id="name" [(ngModel)]="name" class="form-control"
-                        placeholder="Ime...">
-                </div>
-                <label>Email adresa</label>
-                <div class="input-group no-border">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
-                    </div>
-                    <input type="email" formControlName="email" id="email" [(ngModel)]="email" class="form-control"
-                        placeholder="example@gmail.com">
-                </div>
-                <label>Broj telefona</label>
-                <div class="input-group no-border">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="now-ui-icons tech_mobile"></i></span>
-                    </div>
-                    <input type="text" class="form-control" formControlName="phone" id="phone" [(ngModel)]="phone"
-                        placeholder="063333333">
-                </div>
-                <div class="form-group no-border">
-                    <label>Vaša poruka</label>
-                    <textarea name="text" formControlName="testMessage" id="testMessage" [(ngModel)]="testMessage"
-                        class="form-control" rows="6" placeholder="Vaša poruka..."></textarea>
-                </div>
-                <div class="submit text-center">
-                    <input type="submit" [disabled]="!reactiveForm.valid" class="btn btn-info btn-raised btn-round"
-                        value="Pošalji">
-                </div>
-            </form>
+        <div class="col-md-4 mr-auto ml-auto ">
+            <h2 class="text-center title">Radno vreme</h2>
+            <h4 class="text-center description">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Ponedeljak
+                        </td>
+                        <td>
+                            7:30-15:30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Utorak
+                        </td>
+                        <td>
+                            7:30-15:30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sreda
+                        </td>
+                        <td>
+                            7:30-15:30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Četvrtak
+                        </td>
+                        <td>
+                            7:30-15:30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Petak
+                        </td>
+                        <td>
+                            7:30-15:30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Subota
+                        </td>
+                        <td>
+                            8:00-12:00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Nedelja
+                        </td>
+                        <td>
+                            -
+                        </td>
+                    </tr>
+                </table>
+            </h4>
         </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <h2 class="text-center title">Postavite pitanje</h2>
+                <h4 class="text-center description">Ukoliko imate nedoumice budite slobodni da nas kontaktirate putem
+                    maila.
+                </h4>
+                <form class="contact-form" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Vaše ime</label>
+                                <input type="text" class="form-control" formControlName="name" id="name"
+                                    [(ngModel)]="name">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Vaš Email</label>
+                                <input type="email" class="form-control" formControlName="email" id="email"
+                                    [(ngModel)]="email">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Vaš broj telefona</label>
+                                <input type="number" class="form-control" class="form-control" formControlName="phone"
+                                    id="phone" [(ngModel)]="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleMessage" class="bmd-label-floating">Vaša poruka</label>
+                        <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 ml-auto mr-auto text-center">
+                            <button type="submit" class="btn btn-primary btn-raised" [disabled]="!reactiveForm.valid">
+                                Pošalji
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
         <div class="col-md-4 ml-auto mr-auto">
             <div class="info info-horizontal ">
 
                 <div class="description">
-                    <h4 style="font-weight: 500;"> <i class="now-ui-icons location_pin"></i> &nbsp;Nađite nas u kancelarijama
+                    <h4 style="font-weight: 500;"> <i class="now-ui-icons location_pin"></i> &nbsp;Nađite nas u
+                        kancelarijama
                     </h4>
                     <p class="font-weight-normal"> Vladike Ćirića, 31,<br>
-                        21000 Novi Sad, 
+                        21000 Novi Sad,
                         Srbija
                     </p>
                 </div>
@@ -71,4 +176,5 @@
         </div>
     </div>
 </div>
+-->
 <app-footer></app-footer>
