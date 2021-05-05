@@ -1,86 +1,90 @@
 <div class="wrapper ">
-    <div class="sidebar" data-color="gray">
-      <!--
+  <div class="sidebar" data-color="purple">
+    <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-      <div class="logo">
-        <a href="#pablo" class="simple-text logo-mini">
-          SS
-        </a>
-        <a href="#pablo" class="simple-text logo-normal">
-          Studio Spremo
-        </a>
+    <div class="logo">
+      <a href="#pablo" class="simple-text logo-mini">
+        CTP Studio Spremo
+      </a>
+    </div>
+    <div class="sidebar-wrapper" id="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a href="/admin-dashboard" routerLink="/admin-dashboard" routerlinkactive="active" class="nav-link ">
+            <i class="material-icons">dashboard</i>
+            <b>Kontrolna tabla</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/admin-notifications" routerLink="/admin-notifications" routerlinkactive="active" class="nav-link">
+            <i class="material-icons">notifications</i>
+            <b>Obaveštenja</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#pablo" class="nav-link">
+            <i class="material-icons">post_add</i>
+            <b>Dodaj objavu</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#pablo" class="nav-link">
+            <i class="material-icons">table_chart</i>
+            <b>Tabela flexo</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#pablo" class="nav-link">
+            <i class="material-icons">table_chart</i>
+            <b>Tabela offset</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#pablo" class="nav-link">
+            <i class="material-icons">content_paste</i>
+            <b>Otpremnice</b>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-panel" id="main-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-gray ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#pablo"> Kontrolna tabla </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon icon-bar"></span>
+          <span class="navbar-toggler-icon icon-bar"></span>
+          <span class="navbar-toggler-icon icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#pablo">
+                <i class="material-icons">dynamic_feed</i> &nbsp;Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pablo">
+                <i class="material-icons">logout</i> &nbsp;Odjava
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="sidebar-wrapper"  id="sidebar-wrapper">
-        <ul class="nav">
-          <li class="active ">
-            <a href="#pablo">
-              <i class="now-ui-icons design_app"></i>
-              <p><b>Kontrolna tabla</b></p>
-            </a>
-          </li>
-          <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
-              <p><b>Dodaj objavu</b></p>
-            </a>
-          </li>
-          <li>
-            <a href="./map.html">
-              <i class="now-ui-icons location_map-big"></i>
-              <p><b>Mapa</b></p>
-            </a>
-          </li>
-          <li>
-            <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p><b>Obaveštenja</b></p>
-            </a>
-          </li>
-          <li>
-            <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p><b>Uredi profil</b></p>
-            </a>
-          </li>
-          <li>
-            <a href="./tables.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p><b>Tabela flexo</b></p>
-            </a>
-          </li>
-          <li>
-            <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p><b>Tabela offset</b></p>
-            </a>
-          </li>
-        </ul>
+    </nav>
+    <!-- End Navbar -->
+    <div class="main-panel" id="main-panel">
+      <div class="content">
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
-    <div class="main-panel" id="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-gray " color-on-scroll="500">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#pablo"> Kontrolna tabla </a>
-            
-            <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                            <i class="now-ui-icons education_paper"></i>
-                            <p>&nbsp;Blog</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                            <i class="now-ui-icons media-1_button-power"></i>
-                            <p>&nbsp;Odjava</p>
-                        </a> 
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-      <!-- End Navbar -->
+  </div>
+</div>

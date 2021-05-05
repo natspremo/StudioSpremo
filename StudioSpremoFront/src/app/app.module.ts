@@ -20,6 +20,8 @@ import { TnavbarNonregComponent } from './components/navbar-transparent/tnavbar-
 import { TnavbarRegComponent } from './components/navbar-transparent/tnavbar-reg/tnavbar-reg.component';
 import { NewFlexoJobComponent } from './components/new-flexo-job/new-flexo-job.component';
 import { NewOffsetJobComponent } from './components/new-offset-job/new-offset-job.component';
+import { AdminNotificationsComponent } from './components/admin-notifications/admin-notifications.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { NewOffsetJobComponent } from './components/new-offset-job/new-offset-jo
     TnavbarNonregComponent,
     TnavbarRegComponent,
     NewFlexoJobComponent,
-    NewOffsetJobComponent
+    NewOffsetJobComponent,
+    AdminNotificationsComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

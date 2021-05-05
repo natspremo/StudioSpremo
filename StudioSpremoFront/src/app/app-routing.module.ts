@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminNotificationsComponent } from './components/admin-notifications/admin-notifications.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HomepageAdminComponent } from './components/homepage/homepage-admin/homepage-admin.component';
 import { HomepageNonregComponent } from './components/homepage/homepage-nonreg/homepage-nonreg.component';
@@ -23,7 +25,7 @@ const routes: Routes = [
     path: "homepage-reg",
     children: [
       {
-        path:"",
+        path: "",
         component: HomepageRegUserComponent
       },
       {
@@ -38,7 +40,20 @@ const routes: Routes = [
   },
   {
     path: "homepage-admin",
-    component: HomepageAdminComponent
+    children: [
+      {
+        path: "",
+        component: HomepageAdminComponent
+      }
+    ]
+  },
+  {
+    path: "admin-notifications",
+    component: AdminNotificationsComponent
+  },
+  {
+    path: "admin-dashboard",
+    component: AdminDashboardComponent
   },
   {
     path: "sign-in",
