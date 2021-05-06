@@ -12,6 +12,14 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+ .inline {
+  display: inline-flex !important;
+  width: 10rem;
+ }
+
+ .margine {
+   margin: 1rem;
+ }
 
 .page-header-small {
   min-height: 60vh;
