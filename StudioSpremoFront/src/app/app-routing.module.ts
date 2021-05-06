@@ -44,16 +44,16 @@ const routes: Routes = [
       {
         path: "",
         component: HomepageAdminComponent
+      },
+      {
+        path: "admin-notifications",
+        component: AdminNotificationsComponent
+      },
+      {
+        path: "admin-dashboard",
+        component: AdminDashboardComponent
       }
     ]
-  },
-  {
-    path: "admin-notifications",
-    component: AdminNotificationsComponent
-  },
-  {
-    path: "admin-dashboard",
-    component: AdminDashboardComponent
   },
   {
     path: "sign-in",

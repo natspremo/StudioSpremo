@@ -1,0 +1,68 @@
+<div id="navigation-pills">
+    <div class="row">
+        <div class="col-md-1">
+            <ul class="p-3 nav nav-pills nav-pills-icons flex-column" role="tablist">
+                <!-- color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", 
+                    "nav-pills-warning","nav-pills-danger" -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#dashboard-2" role="tab" data-toggle="tab">
+                        <i class="material-icons">dashboard</i>
+                        Aktuelno
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#schedule" role="tab" data-toggle="tab">
+                        <i class="material-icons">schedule</i>
+                        Informacije
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#obavestenja" role="tab" data-toggle="tab">
+                        <i class="material-icons">notifications</i>
+                        Obaveštenja
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#flexo" role="tab" data-toggle="tab">
+                        <i class="material-icons">toc</i>
+                        Flexo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#offset" role="tab" data-toggle="tab">
+                        <i class="material-icons">toc</i>
+                        Offset
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#otpremnice" role="tab" data-toggle="tab">
+                        <i class="material-icons">edit_note</i>
+                        Otpremnice
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 ml-auto mr-auto">
+            <div class="p-3 tab-content">
+                <div class="tab-pane active" id="dashboard-2">
+                    <app-admin-dashboard></app-admin-dashboard>
+                </div>
+                <div class="tab-pane" id="schedule">
+                    <app-admin-schedule></app-admin-schedule>
+                </div>
+                <div class="tab-pane" id="obavestenja">
+                    <app-admin-notifications></app-admin-notifications>
+                </div>
+                <div class="tab-pane" id="flexo">
+                    <app-admin-table-flexo></app-admin-table-flexo>
+                </div>
+                <div class="tab-pane" id="offset">
+                    <app-admin-table-offset></app-admin-table-offset>
+                </div>
+                <div class="tab-pane" id="otpremnice">
+                    <app-admin-otpremnice></app-admin-otpremnice>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

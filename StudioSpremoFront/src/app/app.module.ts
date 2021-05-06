@@ -22,6 +22,11 @@ import { NewFlexoJobComponent } from './components/new-flexo-job/new-flexo-job.c
 import { NewOffsetJobComponent } from './components/new-offset-job/new-offset-job.component';
 import { AdminNotificationsComponent } from './components/admin-notifications/admin-notifications.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { HpDataAdminComponent } from './components/homepage/homepage-admin/hp-data-admin/hp-data-admin.component';
+import { AdminScheduleComponent } from './components/admin-schedule/admin-schedule.component';
+import { AdminTableFlexoComponent } from './components/admin-table-flexo/admin-table-flexo.component';
+import { AdminTableOffsetComponent } from './components/admin-table-offset/admin-table-offset.component';
+import { AdminOtpremniceComponent } from './components/admin-otpremnice/admin-otpremnice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +47,12 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     NewFlexoJobComponent,
     NewOffsetJobComponent,
     AdminNotificationsComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    HpDataAdminComponent,
+    AdminScheduleComponent,
+    AdminTableFlexoComponent,
+    AdminTableOffsetComponent,
+    AdminOtpremniceComponent
   ],
   imports: [
     BrowserModule,
