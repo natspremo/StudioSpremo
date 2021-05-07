@@ -4,7 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 @Component({
   selector: 'app-new-flexo-job',
   templateUrl: './new-flexo-job.component.html',
-  styleUrls: ['./material-bootstrap-wizard.css']
+  styleUrls: ['./new-flexo-job.component.css']
 })
 export class NewFlexoJobComponent implements OnInit {
   selectedService: string = "";
@@ -18,7 +18,7 @@ export class NewFlexoJobComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.loadScript1();
+    
   }
 
   onSubmit() : void {

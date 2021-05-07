@@ -1,188 +1,64 @@
-
-<div class="landing-page sidebar-collapse image-container set-full-height" style="background-image: url('assets/img/wizard-city.jpg')">
+<div class="wrapper" >
 	<app-navbar-reg></app-navbar-reg>
-	<!--   Big container   -->
-	<div class="container">
+	<div class="container p-5 mt-5" id="navigation-pills">
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<!--      Wizard container        -->
-				<div class="wizard-container">
-					<div class="card wizard-card" data-color="purple" id="wizard">
-						<form action="" method="">
-						<!--        You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
+			<div class="card">
+				<div class="card-header card-header-primary">
+					<h3 class="card-title">Flexo posao</h3>
+					<p class="card-category">Popunite formular kako bi poslali posao </p>
+				</div>
+				<div class="card-body">
+					<div class="row justify-content-center">
+						<!--   Big container   -->
+						<div id="rootwizard">
+							<ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link" href="#tab1" role="tab" data-toggle="tab">
+										<i class="material-icons">schedule</i>
+										<div>First</div></a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Second</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Third</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab4" role="tab" data-toggle="tab">Forth</a></li>
+							</ul>
 
-							<div class="wizard-header">
-								<h3 class="wizard-title">
-									List Your Place
-								</h3>
-								<h5>This information will let us know more about your place.</h5>
+							<div id="bar" class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+							  </div>
+							<div class="tab-content tab-space">
+								<div class="tab-pane active" id="tab1">
+									1
+									<ul class="pager wizard list-type" role="tablist">
+										<li class="next"><button class="btn btn-primary btn-round" role="tab" data-toggle="tab" href="#tab2">Next</button></li>
+									</ul>
+								</div>
+								<div class="tab-pane" id="tab2">
+									2
+									<ul class="pager wizard list-type" role="tablist">
+										<li class="previous"><button class="btn btn-primary btn-round" href="#tab1" role="tab" data-toggle="tab">Previous</button></li>
+										<li class="next"><button class="btn btn-primary btn-round" href="#tab3" role="tab" data-toggle="tab">Next</button></li>
+									</ul>
+								</div>
+								<div class="tab-pane" id="tab3">
+									3
+									<ul class="pager wizard list-type" role="tablist">
+										<li class="previous"><button class="btn btn-primary btn-round" href="#tab1" role="tab" data-toggle="tab">Previous</button></li>
+										<li class="next"><button class="btn btn-primary btn-round" href="#tab3" role="tab" data-toggle="tab">Next</button></li>
+									</ul>
+								</div>
+								<div class="tab-pane" id="tab4">
+									4
+									<ul class="pager wizard list-type" role="tablist">
+										<li class="previous"><button class="btn btn-primary btn-round" href="#tab1" role="tab" data-toggle="tab">Previous</button></li>
+										<li class="next"><button class="btn btn-primary btn-round" href="" role="tab" data-toggle="tab">Završi</button></li>
+									</ul>
+								</div>
+								
 							</div>
-							<div class="wizard-navigation">
-								<ul>
-									<li><a href="#location" data-toggle="tab">Location</a></li>
-									<li><a href="#type" data-toggle="tab">Type</a></li>
-									<li><a href="#facilities" data-toggle="tab">Facilities</a></li>
-									<li><a href="#description" data-toggle="tab">Description</a></li>
-								</ul>
-							</div>
-
-							<div class="tab-content">
-								<div class="tab-pane" id="location">
-									<div class="row">
-										<div class="col-sm-12">
-											<h4 class="info-text"> Let's start with the basic details</h4>
-										</div>
-										<div class="col-sm-5 col-sm-offset-1">
-											<div class="form-group label-floating">
-												<label class="control-label">City</label>
-												<input type="text" class="form-control" id="exampleInputEmail1">
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="form-group label-floating">
-												<label class="control-label">Country</label>
-												<select name="country" class="form-control">
-													<option disabled="" selected=""></option>
-													<option value="Afghanistan"> Afghanistan </option>
-													<option value="Albania"> Albania </option>
-													<option value="Algeria"> Algeria </option>
-													<option value="American Samoa"> American Samoa </option>
-													<option value="Andorra"> Andorra </option>
-													<option value="Angola"> Angola </option>
-													<option value="Anguilla"> Anguilla </option>
-													<option value="Antarctica"> Antarctica </option>
-													<option value="...">...</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5 col-sm-offset-1">
-											<div class="form-group label-floating">
-												<label class="control-label">Accommodates</label>
-												<select class="form-control">
-													<option disabled="" selected=""></option>
-													<option>1 Person</option>
-													<option>2 Persons </option>
-													<option>3 Persons</option>
-													<option>4 Persons</option>
-													<option>5 Persons</option>
-													<option>6+ Persons</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="form-group label-floating">
-												<label class="control-label">Rent price</label>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">$</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane" id="type">
-									<h4 class="info-text">What type of location do you have? </h4>
-									<div class="row">
-										<div class="col-sm-10 col-sm-offset-1">
-											<div class="col-sm-4 col-sm-offset-2">
-												<div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this option if you have a house.">
-													<input type="radio" name="type" value="House">
-													<div class="icon">
-														<i class="material-icons">home</i>
-													</div>
-													<h6>House</h6>
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this option if you have an appartment">
-													<input type="radio" name="type" value="Appartment">
-													<div class="icon">
-														<i class="material-icons">hotel</i>
-													</div>
-													<h6>Appartment</h6>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane" id="facilities">
-									<h4 class="info-text">Tell us more about facilities. </h4>
-									<div class="row">
-										<div class="col-sm-5 col-sm-offset-1">
-										  <div class="form-group label-floating">
-												<label class="control-label">Your place is good for</label>
-												<select class="form-control">
-													<option disabled="" selected=""></option>
-													<option>Business</option>
-													<option>Vacation </option>
-													<option>Work</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="form-group label-floating">
-												<label class="control-label">Is air conditioning included ?</label>
-												<select class="form-control">
-													<option disabled="" selected=""></option>
-													<option>Yes</option>
-													<option>No </option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5 col-sm-offset-1">
-											<div class="form-group label-floating">
-												<label class="control-label">Does your place have wi-fi?</label>
-												<select class="form-control">
-													<option disabled="" selected=""></option>
-													<option>Yes</option>
-													<option>No </option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="form-group label-floating">
-												<label class="control-label">Is breakfast included?</label>
-												<select class="form-control">
-													<option disabled="" selected=""></option>
-													<option>Yes</option>
-													<option>No </option>
-												</select>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane" id="description">
-									<div class="row">
-										<h4 class="info-text"> Drop us a small description. </h4>
-										<div class="col-sm-6 col-sm-offset-1">
-											<div class="form-group label-floating">
-												<label class="control-label">Place description</label>
-												<textarea class="form-control" placeholder="" rows="9"></textarea>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label class="control-label">Example</label>
-												<p class="description">"The place is really nice. We use it every sunday when we go fishing. It is so awesome."</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="wizard-footer">
-								<div class="pull-right">
-									<input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Next' />
-									<input type='button' class='btn btn-finish btn-fill btn-primary btn-wd' name='finish' value='Finish' />
-								</div>
-								<div class="pull-left">
-									<input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</form>
+						</div>
+						<!--  big container -->
 					</div>
-				</div> <!-- wizard container -->
+				</div>
 			</div>
-		</div> <!-- row -->
-	</div> <!--  big container -->
-</div>
+		</div>
+	</div>

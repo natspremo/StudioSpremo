@@ -12,6 +12,10 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+.list-type {
+  list-style-type: none;
+}
+
 /*     brand Colors              */
 .card {
   font-size: .875rem;

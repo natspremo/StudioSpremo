@@ -27,6 +27,7 @@ import { AdminScheduleComponent } from './components/admin-schedule/admin-schedu
 import { AdminTableFlexoComponent } from './components/admin-table-flexo/admin-table-flexo.component';
 import { AdminTableOffsetComponent } from './components/admin-table-offset/admin-table-offset.component';
 import { AdminOtpremniceComponent } from './components/admin-otpremnice/admin-otpremnice.component';
+import { AdminContactsComponent } from './components/admin-contacts/admin-contacts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { AdminOtpremniceComponent } from './components/admin-otpremnice/admin-ot
     AdminScheduleComponent,
     AdminTableFlexoComponent,
     AdminTableOffsetComponent,
-    AdminOtpremniceComponent
+    AdminOtpremniceComponent,
+    AdminContactsComponent
   ],
   imports: [
     BrowserModule,
