@@ -1,11 +1,11 @@
-<div class="wrapper" >
+<div class="wrapper">
 	<app-navbar-reg></app-navbar-reg>
 	<div class="container p-5 mt-5" id="navigation-pills">
 		<div class="row">
 			<div class="card">
 				<div class="card-header card-header-primary">
-					<h3 class="card-title">Flexo posao</h3>
-					<p class="card-category">Popunite formular kako bi poslali posao </p>
+					<h3 class="card-title">Slanje posla...</h3>
+					<p class="card-category">Popunite formular kako biste poslali posao </p>
 				</div>
 				<div class="card-body">
 					<div class="row justify-content-center">
@@ -14,46 +14,106 @@
 							<ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
 								<li class="nav-item">
 									<a class="nav-link" href="#tab1" role="tab" data-toggle="tab">
-										<i class="material-icons">schedule</i>
-										<div>First</div></a>
+										<i class="material-icons">ads_click</i>
+									</a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Second</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Third</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab4" role="tab" data-toggle="tab">Forth</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">
+										<i class="material-icons">tune</i>
+									</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab3" role="tab" data-toggle="tab">
+										<i class="material-icons">attach_file</i>
+									</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab4" role="tab" data-toggle="tab">
+										<i class="material-icons">task_alt</i>
+									</a></li>
 							</ul>
 
 							<div id="bar" class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-							  </div>
+								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+									aria-valuemax="100" style="width: 0%;"></div>
+							</div>
 							<div class="tab-content tab-space">
+								<!--		STEP 1		-->
 								<div class="tab-pane active" id="tab1">
-									1
-									<ul class="pager wizard list-type" role="tablist">
-										<li class="next"><button class="btn btn-primary btn-round" role="tab" data-toggle="tab" href="#tab2">Next</button></li>
+									<div class="card">
+										<div class="card-header card-header-primary">
+											<h3 class="card-title">Odaberite uslugu</h3>
+										</div>
+										<div class="card-body">
+											<div class="row justify-content-center">
+												<div class="form-check form-check-radio form-check-inline">
+													<label class="form-check-label">
+														<input class="form-check-input font-weight-bold" type="radio"
+															name="inlineRadioOptions" id="inlineRadio1" value="option1">
+														Priprema klišea
+														<span class="circle">
+															<span class="check"></span>
+														</span>
+														
+													</label>
+												</div>
+												<div class="form-check form-check-radio form-check-inline">
+													<label class="form-check-label">
+														<input class="form-check-input" type="radio"
+															name="inlineRadioOptions" id="inlineRadio2" value="option2">
+														Izrada klišea
+														<span class="circle">
+															<span class="check"></span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="pager wizard list-type text-right" role="tablist">
+										<li class="next"><button class="btn btn-primary btn-round" role="tab"
+												data-toggle="tab" href="#tab2">Dalje</button></li>
 									</ul>
 								</div>
+								<!--		STEP 2		-->
 								<div class="tab-pane" id="tab2">
-									2
-									<ul class="pager wizard list-type" role="tablist">
-										<li class="previous"><button class="btn btn-primary btn-round" href="#tab1" role="tab" data-toggle="tab">Previous</button></li>
-										<li class="next"><button class="btn btn-primary btn-round" href="#tab3" role="tab" data-toggle="tab">Next</button></li>
-									</ul>
+									
+									<div class="row align-items-end">
+										<div class="col align-self-end">
+											<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+												<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
+														role="tab" data-toggle="tab">Dalje</button></li>
+												<li class="previous"><button class="btn btn-primary btn-round"
+														href="#tab1" role="tab" data-toggle="tab">Nazad</button></li>
+											</ul>
+										</div>
+									</div>
+
 								</div>
+								<!--		STEP 3		-->
 								<div class="tab-pane" id="tab3">
 									3
-									<ul class="pager wizard list-type" role="tablist">
-										<li class="previous"><button class="btn btn-primary btn-round" href="#tab1" role="tab" data-toggle="tab">Previous</button></li>
-										<li class="next"><button class="btn btn-primary btn-round" href="#tab3" role="tab" data-toggle="tab">Next</button></li>
-									</ul>
+									<div class="row align-items-end">
+										<div class="col align-self-end">
+											<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+												<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
+														role="tab" data-toggle="tab">Dalje</button></li>
+												<li class="previous"><button class="btn btn-primary btn-round"
+														href="#tab1" role="tab" data-toggle="tab">Nazad</button></li>
+											</ul>
+										</div>
+									</div>
 								</div>
+								<!--		STEP 4		-->
 								<div class="tab-pane" id="tab4">
 									4
-									<ul class="pager wizard list-type" role="tablist">
-										<li class="previous"><button class="btn btn-primary btn-round" href="#tab1" role="tab" data-toggle="tab">Previous</button></li>
-										<li class="next"><button class="btn btn-primary btn-round" href="" role="tab" data-toggle="tab">Završi</button></li>
-									</ul>
+									<div class="row align-items-end">
+										<div class="col align-self-end">
+											<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+												<li class="next"><button class="btn btn-primary btn-round" href=""
+														role="tab" data-toggle="tab">Završi</button></li>
+												<li class="previous"><button class="btn btn-primary btn-round"
+														href="#tab1" role="tab" data-toggle="tab">Nazad</button></li>
+											</ul>
+										</div>
+									</div>
 								</div>
-								
+
 							</div>
 						</div>
 						<!--  big container -->
