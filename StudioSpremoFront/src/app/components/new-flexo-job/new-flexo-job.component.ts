@@ -7,51 +7,60 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./new-flexo-job.component.css']
 })
 export class NewFlexoJobComponent implements OnInit {
-  selectedService: string = "";
-  selectedThickness: string = "";
-  reactiveForm: FormGroup ;
-
+  step1: boolean = true;
+  step2: boolean = false;
+  step3: boolean = false;
+  step4: boolean = false;
+  radioSelected: string = "";
+  prepress: boolean = false;
+  production: boolean = false;
+  nextStep: boolean = true;
+  alert: boolean = false;
   constructor(public formBuilder: FormBuilder) {
-    this.reactiveForm = this.formBuilder.group({
-      'userName': new FormControl('', [Validators.required, Validators.maxLength(100)] )
-    });
-   }
+  }
 
   ngOnInit(): void {
-    
-  }
-
-  onSubmit() : void {
 
   }
 
-  setServiceKlise() {
-    this.selectedService = "Klišea";
+  onSubmit(): void {
+
   }
 
-  setServicePriprema() {
-    this.selectedService = "Pripreme za štampu";
+  radioChange(event: any) {
+    this.radioSelected = event.target.value;
+    this.nextStep = false;
   }
 
-  setThickness(thick: string) {
-    this.selectedThickness = thick;
+  setSteps(step1: boolean, step2: boolean, step3: boolean, step4: boolean) {
+    this.step1 = step1;
+    this.step2 = step2;
+    this.step3 = step3;
+    this.step4 = step4;
   }
 
-  public loadScript1() {
-    let body = <HTMLDivElement> document.body;
-    let script = document.createElement('script');
-    script.innerHTML = '';
-    script.type = "text/javascript";
-    script.async = true;
-    script.src = "./material-bootstrap-wizard.js";
-    script.defer = true;
-    body.appendChild(script);
-    let script2 = document.createElement('script');
-    script2.innerHTML = '';
-    script2.type = "text/javascript";
-    script2.async = true;
-    script2.src = "./jquery-2.2.4.min.js";
-    script2.defer = true;
-    body.appendChild(script2);
+  nextStep1(): void {      //kliknuto prvo NEXT
+    if (this.radioSelected != "") {
+      if (this.radioSelected == "prepress") {
+        this.prepress = true;
+        this.production = false;
+      }
+      else if (this.radioSelected == "production") {
+        this.production = true;
+        this.prepress = false;
+      }
+      this.setSteps(false, true, false, false);
+      this.alert = false;
+    } else {
+      this.alert = true;
+    }
+  }
+
+  nextStep2(): void {
+    this.setSteps(false, false, true, false);
+  }
+
+  nextStep3(): void {
+    this.setSteps(false, false, false, true);
   }
 }

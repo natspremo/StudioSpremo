@@ -13,6 +13,10 @@
 
  */
 
+ .form-width {
+  width: 700px;
+ }
+
  .inline {
   display: inline-flex !important;
   width: 10rem;
@@ -14095,7 +14099,7 @@ fieldset[disabled][disabled] .has-rose .form-control,
 
 .bmd-form-group {
   position: relative;
-  padding-top: 27px;
+  /* padding-top: 27px; */
 }
 
 .bmd-form-group:not(.has-success):not(.has-danger) [class^='bmd-label'].bmd-label-floating,

@@ -10,110 +10,233 @@
 				<div class="card-body">
 					<div class="row justify-content-center">
 						<!--   Big container   -->
-						<div id="rootwizard">
-							<ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-								<li class="nav-item">
-									<a class="nav-link" href="#tab1" role="tab" data-toggle="tab">
-										<i class="material-icons">ads_click</i>
-									</a>
-								</li>
-								<li class="nav-item"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab">
-										<i class="material-icons">tune</i>
-									</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab3" role="tab" data-toggle="tab">
-										<i class="material-icons">attach_file</i>
-									</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab4" role="tab" data-toggle="tab">
-										<i class="material-icons">task_alt</i>
-									</a></li>
-							</ul>
+						<div class="form-width">
+							<!--		STEP 1		-->
+							<div class="tab-pane active" id="tab1" *ngIf="step1">
+								<nav>
+									<ul class="pagination justify-content-center">
+										<li class="page-item active"><a class="page-link" tabindex="-1">1</a></li>
+										<li class="page-item ">
+											<a class="page-link" tabindex="-1">2</a>
+										</li>
+										<li class="page-item"><a class="page-link" tabindex="-1">3</a></li>
+										<li class="page-item ">
+											<a class="page-link" tabindex="-1">4</a>
+										</li>
+									</ul>
+								</nav>
 
-							<div id="bar" class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-									aria-valuemax="100" style="width: 0%;"></div>
-							</div>
-							<div class="tab-content tab-space">
-								<!--		STEP 1		-->
-								<div class="tab-pane active" id="tab1">
-									<div class="card">
-										<div class="card-header card-header-primary">
-											<h3 class="card-title">Odaberite uslugu</h3>
+								<div class="card">
+									<div class="card-header card-header-primary">
+										<h3 class="card-title">Odaberite uslugu</h3>
+									</div>
+									<div class="card-body">
+										<div class="row justify-content-center">
+											<div class="form-check form-check-radio form-check-inline">
+												<label class="form-check-label">
+													<input class="form-check-input font-weight-bold"
+														(change)="radioChange($event)" type="radio" [checked]="prepress"
+														name="inlineRadioOptions" id="inlineRadio1" value="prepress">
+													Priprema klišea
+													<span class="circle">
+														<span class="check"></span>
+													</span>
+
+												</label>
+											</div>
+											<div class="form-check form-check-radio form-check-inline">
+												<label class="form-check-label">
+													<input class="form-check-input" (change)="radioChange($event)"
+														[checked]="production" type="radio" name="inlineRadioOptions"
+														id="inlineRadio2" value="production">
+													Izrada klišea
+													<span class="circle">
+														<span class="check"></span>
+													</span>
+												</label>
+											</div>
 										</div>
-										<div class="card-body">
-											<div class="row justify-content-center">
-												<div class="form-check form-check-radio form-check-inline">
-													<label class="form-check-label">
-														<input class="form-check-input font-weight-bold" type="radio"
-															name="inlineRadioOptions" id="inlineRadio1" value="option1">
-														Priprema klišea
-														<span class="circle">
-															<span class="check"></span>
-														</span>
-														
-													</label>
-												</div>
-												<div class="form-check form-check-radio form-check-inline">
-													<label class="form-check-label">
-														<input class="form-check-input" type="radio"
-															name="inlineRadioOptions" id="inlineRadio2" value="option2">
-														Izrada klišea
-														<span class="circle">
-															<span class="check"></span>
-														</span>
+									</div>
+								</div>
+								<ul class="pager wizard list-type text-right" role="tablist">
+									<li class="next"><button class="btn btn-primary btn-round" role="tab" [disabled]="nextStep"
+											href="#tab2" (click)="nextStep1()">Dalje</button></li>
+								</ul>
+							</div>
+							<!--		STEP 2		-->
+							<div class="tab-pane" id="tab2" *ngIf="step2">
+								<nav>
+									<ul class="pagination justify-content-center">
+										<li class="page-item">
+											<a class="page-link" (click)="setSteps(true, false, false, false)"
+												tabindex="-1">1</a>
+										</li>
+										<li class="page-item active">
+											<a class="page-link" tabindex="-1">2</a>
+										</li>
+										<li class="page-item"><a class="page-link" tabindex="-1">3</a></li>
+										<li class="page-item ">
+											<a class="page-link" tabindex="-1">4</a>
+										</li>
+									</ul>
+								</nav>
+
+								<form>
+									<div class="row">
+										<div class="col-md-6 pr-1">
+											<div class="form-group has-default">
+												<input type="text" class="form-control" placeholder="Naziv posla">
+											</div>
+										</div>
+										<div class="col-md-6 pl-5">
+											<div class="form-group">
+												<div class="togglebutton">
+													<label>
+														<input type="checkbox">
+														<span class="toggle"></span>
+														Kurirska dostava
 													</label>
 												</div>
 											</div>
 										</div>
 									</div>
-									<ul class="pager wizard list-type text-right" role="tablist">
-										<li class="next"><button class="btn btn-primary btn-round" role="tab"
-												data-toggle="tab" href="#tab2">Dalje</button></li>
+
+									<div class="row">
+										<div class="col-md-6 pr-1">
+											<div class="form-group has-default">
+												<input type="text" class="form-control" placeholder="Vrsta materijala">
+											</div>
+										</div>
+										<div class="col-md-6 pl-5">
+											<div class="form-group">
+												<div class="togglebutton">
+													<label>
+														<input type="checkbox">
+														<span class="toggle"></span>
+														Skraćenje u fajlu
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6 pr-1">
+											<div class="form-group has-default">
+												<input type="text" class="form-control" placeholder="Linijatura">
+											</div>
+										</div>
+										<div class="col-md-6 pl-5">
+											<div class="form-group">
+												<div class="togglebutton">
+													<label>
+														<input type="checkbox">
+														<span class="toggle"></span>
+														Montaža
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6 pr-1">
+											<div class="form-group has-default">
+												<input type="text" class="form-control" placeholder="Obim valjka">
+											</div>
+										</div>
+										<div class="col-md-6 pl-5">
+											<div class="form-group">
+												<div class="togglebutton">
+													<label>
+														<input type="checkbox">
+														<span class="toggle"></span>
+														Overprint black
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="row align-items-end">
+									<div class="col align-self-end">
+										<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+											<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
+													(click)="nextStep2()" role="tab" data-toggle="tab">Dalje</button>
+											</li>
+											<li class="previous"><button class="btn btn-primary btn-round" href="#tab1"
+													(click)="setSteps(true, false, false, false)" role="tab"
+													data-toggle="tab">Nazad</button></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<!--		STEP 3		-->
+							<div class="tab-pane" id="tab3" *ngIf="step3">
+								<nav>
+									<ul class="pagination justify-content-center">
+										<li class="page-item">
+											<a class="page-link" (click)="setSteps(true, false, false, false)"
+												tabindex="-1">1</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" (click)="setSteps(false, true, false, false)"
+												tabindex="-1">2</a>
+										</li>
+										<li class="page-item active"><a class="page-link" tabindex="-1">3</a></li>
+										<li class="page-item ">
+											<a class="page-link" tabindex="-1">4</a>
+										</li>
 									</ul>
-								</div>
-								<!--		STEP 2		-->
-								<div class="tab-pane" id="tab2">
-									
-									<div class="row align-items-end">
-										<div class="col align-self-end">
-											<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
-												<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
-														role="tab" data-toggle="tab">Dalje</button></li>
-												<li class="previous"><button class="btn btn-primary btn-round"
-														href="#tab1" role="tab" data-toggle="tab">Nazad</button></li>
-											</ul>
-										</div>
-									</div>
+								</nav>
 
-								</div>
-								<!--		STEP 3		-->
-								<div class="tab-pane" id="tab3">
-									3
-									<div class="row align-items-end">
-										<div class="col align-self-end">
-											<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
-												<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
-														role="tab" data-toggle="tab">Dalje</button></li>
-												<li class="previous"><button class="btn btn-primary btn-round"
-														href="#tab1" role="tab" data-toggle="tab">Nazad</button></li>
-											</ul>
-										</div>
+								3
+								<div class="row align-items-end">
+									<div class="col align-self-end">
+										<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+											<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
+													(click)="nextStep3()" role="tab" data-toggle="tab">Dalje</button>
+											</li>
+											<li class="previous"><button class="btn btn-primary btn-round" href="#tab1"
+													role="tab" data-toggle="tab">Nazad</button></li>
+										</ul>
 									</div>
 								</div>
-								<!--		STEP 4		-->
-								<div class="tab-pane" id="tab4">
-									4
-									<div class="row align-items-end">
-										<div class="col align-self-end">
-											<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
-												<li class="next"><button class="btn btn-primary btn-round" href=""
-														role="tab" data-toggle="tab">Završi</button></li>
-												<li class="previous"><button class="btn btn-primary btn-round"
-														href="#tab1" role="tab" data-toggle="tab">Nazad</button></li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							</div>
+							<!--		STEP 4		-->
+							<div class="tab-pane" id="tab4" *ngIf="step4">
+								<nav>
+									<ul class="pagination justify-content-center">
+										<li class="page-item">
+											<a class="page-link" (click)="setSteps(true, false, false, false)"
+												tabindex="-1">1</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" (click)="setSteps(false, true, false, false)"
+												tabindex="-1">2</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" (click)="setSteps(false, false, true, false)"
+												tabindex="-1">3</a>
+										</li>
+										<li class="page-item active">
+											<a class="page-link" tabindex="-1">4</a>
+										</li>
+									</ul>
+								</nav>
 
+								4
+								<div class="row align-items-end">
+									<div class="col align-self-end">
+										<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+											<li class="next"><button class="btn btn-primary btn-round" href=""
+													role="tab" data-toggle="tab">Završi</button></li>
+											<li class="previous"><button class="btn btn-primary btn-round" href="#tab1"
+													role="tab" data-toggle="tab">Nazad</button></li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--  big container -->
