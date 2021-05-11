@@ -29,12 +29,12 @@
 								<div class="card fixed-height">
 									<div class="card-header card-header-primary">
 										<h3 class="card-title">Odaberite uslugu</h3>
-										<p class="card-category">Ovo polje je obavezno</p>
+										<p class="card-category">Odabir je obavezan</p>
 									</div>
 									<div class="card-body">
 										<div class="row justify-content-center p-20">
 											<div class="form-check form-check-radio form-check-inline">
-												<label class="form-check-label">
+												<label class="form-check-label font15">
 													<input class="form-check-input font-weight-bold"
 														(change)="radioChange($event)" type="radio" [checked]="prepress"
 														name="inlineRadioOptions" id="inlineRadio1" value="prepress">
@@ -46,7 +46,7 @@
 												</label>
 											</div>
 											<div class="form-check form-check-radio form-check-inline">
-												<label class="form-check-label">
+												<label class="form-check-label font15">
 													<input class="form-check-input" (change)="radioChange($event)"
 														[checked]="production" type="radio" name="inlineRadioOptions"
 														id="inlineRadio2" value="production">
@@ -110,7 +110,7 @@
 											</div>
 
 											<div class="row">
-												<div class="col-md-6 pr-1">
+												<div class="col-md-6 pr-1 align-self-center">
 													<div class="form-group has-default">
 														<input type="text" class="form-control"
 															placeholder="Vrsta materijala">
@@ -118,12 +118,36 @@
 												</div>
 												<div class="col-md-6 pl-5">
 													<div class="form-group">
-														<div class="togglebutton">
-															<label>
-																<input type="checkbox">
-																<span class="toggle"></span>
-																Skraćenje u fajlu
-															</label>
+														<div class="row">
+															<div class="col align-self-center">
+																<label class="mb-0">
+																	Skraćenje u fajlu:
+																</label>
+															</div>
+															<div class="col">
+																<div class="form-check form-check-radio">
+																	<label class="form-check-label font10 mb-0">
+																		<input class="form-check-input font-weight-bold"
+																			(change)="radioChange($event)" type="radio" [checked]="prepress"
+																			name="inlineRadioOptions" id="inlineRadio1" value="prepress">
+																		Potrebno
+																		<span class="circle">
+																			<span class="check"></span>
+																		</span>
+																	</label>
+																</div>
+																<div class="form-check form-check-radio mt-0">
+																	<label class="form-check-label font10">
+																		<input class="form-check-input" (change)="radioChange($event)"
+																			[checked]="production" type="radio" name="inlineRadioOptions"
+																			id="inlineRadio2" value="production">
+																		Nije potrebno
+																		<span class="circle">
+																			<span class="check"></span>
+																		</span>
+																	</label>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
