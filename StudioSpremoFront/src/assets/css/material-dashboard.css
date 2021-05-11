@@ -3601,7 +3601,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #212529 !important;
   text-align: left;
   list-style: none;
   background-color: #ffffff;
@@ -3727,7 +3727,7 @@ tbody.collapse.show {
 .dropdown-item:active {
   color: #ffffff;
   text-decoration: none;
-  background-color: #2196f3;
+  background-color: #212529;
 }
 
 .dropdown-item.disabled,
@@ -14826,8 +14826,8 @@ h2.title {
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a:active {
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
-  background-color: #9c27b0;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(33, 37, 41, 0.4);
+  background-color: #212529;
   color: #FFFFFF;
 }
 
@@ -17515,7 +17515,8 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card .card-header.card-header-image.no-shadow .colored-shadow {
   display: none !important;
 }
-
+/* old primary */
+/*
 .card .card-header-primary .card-icon,
 .card .card-header-primary .card-text,
 .card .card-header-primary:not(.card-header-icon):not(.card-header-text),
@@ -17523,6 +17524,15 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.card-rotate.bg-primary .front,
 .card.card-rotate.bg-primary .back {
   background: linear-gradient(60deg, #ab47bc, #8e24aa);
+} */
+
+.card .card-header-primary .card-icon,
+.card .card-header-primary .card-text,
+.card .card-header-primary:not(.card-header-icon):not(.card-header-text),
+.card.bg-primary,
+.card.card-rotate.bg-primary .front,
+.card.card-rotate.bg-primary .back {
+  background: linear-gradient(60deg, #212121, rgb(37, 37, 37));
 }
 
 .card .card-header-info .card-icon,
@@ -17569,11 +17579,18 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.card-rotate.bg-rose .back {
   background: linear-gradient(60deg, #ec407a, #d81b60);
 }
-
+/* old primary */
+/*
 .card .card-header-primary .card-icon,
 .card .card-header-primary:not(.card-header-icon):not(.card-header-text),
 .card .card-header-primary .card-text {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+}
+*/
+.card .card-header-primary .card-icon,
+.card .card-header-primary:not(.card-header-icon):not(.card-header-text),
+.card .card-header-primary .card-text {
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(33,33,33, 1);
 }
 
 .card .card-header-danger .card-icon,

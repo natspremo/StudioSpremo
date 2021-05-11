@@ -26,18 +26,19 @@
 									</ul>
 								</nav>
 
-								<div class="card">
+								<div class="card fixed-height">
 									<div class="card-header card-header-primary">
 										<h3 class="card-title">Odaberite uslugu</h3>
+										<p class="card-category">Ovo polje je obavezno</p>
 									</div>
 									<div class="card-body">
-										<div class="row justify-content-center">
+										<div class="row justify-content-center p-20">
 											<div class="form-check form-check-radio form-check-inline">
 												<label class="form-check-label">
 													<input class="form-check-input font-weight-bold"
 														(change)="radioChange($event)" type="radio" [checked]="prepress"
 														name="inlineRadioOptions" id="inlineRadio1" value="prepress">
-													Priprema klišea
+													Priprema i izrada klišea
 													<span class="circle">
 														<span class="check"></span>
 													</span>
@@ -57,11 +58,13 @@
 											</div>
 										</div>
 									</div>
+									<ul class="pager wizard list-type text-right position-f" role="tablist">
+										<li class="next"><button class="btn btn-primary btn-round" role="tab"
+												[disabled]="nextStep" href="#tab2" (click)="nextStep1()">Dalje</button>
+										</li>
+									</ul>
 								</div>
-								<ul class="pager wizard list-type text-right" role="tablist">
-									<li class="next"><button class="btn btn-primary btn-round" role="tab" [disabled]="nextStep"
-											href="#tab2" (click)="nextStep1()">Dalje</button></li>
-								</ul>
+
 							</div>
 							<!--		STEP 2		-->
 							<div class="tab-pane" id="tab2" *ngIf="step2">
@@ -80,87 +83,148 @@
 										</li>
 									</ul>
 								</nav>
-
-								<form>
-									<div class="row">
-										<div class="col-md-6 pr-1">
-											<div class="form-group has-default">
-												<input type="text" class="form-control" placeholder="Naziv posla">
-											</div>
-										</div>
-										<div class="col-md-6 pl-5">
-											<div class="form-group">
-												<div class="togglebutton">
-													<label>
-														<input type="checkbox">
-														<span class="toggle"></span>
-														Kurirska dostava
-													</label>
+								<div class="card fixed-height">
+									<div class="card-header card-header-primary">
+										<h3 class="card-title">Popunite detalje</h3>
+									</div>
+									<div class="card-body">
+										<form>
+											<div class="row">
+												<div class="col-md-6 pr-1">
+													<div class="form-group has-default">
+														<input type="text" class="form-control"
+															placeholder="Naziv posla">
+													</div>
+												</div>
+												<div class="col-md-6 pl-5">
+													<div class="form-group">
+														<div class="togglebutton">
+															<label>
+																<input type="checkbox">
+																<span class="toggle"></span>
+																Kurirska dostava
+															</label>
+														</div>
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>
 
-									<div class="row">
-										<div class="col-md-6 pr-1">
-											<div class="form-group has-default">
-												<input type="text" class="form-control" placeholder="Vrsta materijala">
-											</div>
-										</div>
-										<div class="col-md-6 pl-5">
-											<div class="form-group">
-												<div class="togglebutton">
-													<label>
-														<input type="checkbox">
-														<span class="toggle"></span>
-														Skraćenje u fajlu
-													</label>
+											<div class="row">
+												<div class="col-md-6 pr-1">
+													<div class="form-group has-default">
+														<input type="text" class="form-control"
+															placeholder="Vrsta materijala">
+													</div>
+												</div>
+												<div class="col-md-6 pl-5">
+													<div class="form-group">
+														<div class="togglebutton">
+															<label>
+																<input type="checkbox">
+																<span class="toggle"></span>
+																Skraćenje u fajlu
+															</label>
+														</div>
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>
 
-									<div class="row">
-										<div class="col-md-6 pr-1">
-											<div class="form-group has-default">
-												<input type="text" class="form-control" placeholder="Linijatura">
-											</div>
-										</div>
-										<div class="col-md-6 pl-5">
-											<div class="form-group">
-												<div class="togglebutton">
-													<label>
-														<input type="checkbox">
-														<span class="toggle"></span>
-														Montaža
-													</label>
+											<div class="row">
+												<div class="col-md-6 pr-1">
+													<div class="form-group has-default">
+														<input type="text" class="form-control"
+															placeholder="Linijatura">
+													</div>
+												</div>
+												<div class="col-md-6 pl-5">
+													<div class="form-group">
+														<div class="togglebutton">
+															<label>
+																<input type="checkbox">
+																<span class="toggle"></span>
+																Montaža
+															</label>
+														</div>
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>
 
-									<div class="row">
-										<div class="col-md-6 pr-1">
-											<div class="form-group has-default">
-												<input type="text" class="form-control" placeholder="Obim valjka">
-											</div>
-										</div>
-										<div class="col-md-6 pl-5">
-											<div class="form-group">
-												<div class="togglebutton">
-													<label>
-														<input type="checkbox">
-														<span class="toggle"></span>
-														Overprint black
-													</label>
+											<div class="row">
+												<div class="col-md-6 pr-1">
+													<div class="form-group has-default">
+														<input type="text" class="form-control"
+															placeholder="Obim valjka">
+													</div>
+												</div>
+												<div class="col-md-6 pl-5">
+													<div class="form-group">
+														<div class="togglebutton">
+															<label>
+																<input type="checkbox">
+																<span class="toggle"></span>
+																Overprint black
+															</label>
+														</div>
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-								</form>
-								<div class="row align-items-end">
-									<div class="col align-self-end">
-										<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+
+											<div class="row">
+												<div class="col-md-6 pr-1">
+													<div class="form-group has-default">
+														<input type="text" class="form-control"
+															placeholder="Širina rolne">
+													</div>
+												</div>
+												<div class="col-md-6 pl-5">
+													<div class="form-group">
+														<label
+															class="d-flex align-items-center justify-content-center m-top">Debljina
+															polimera</label>
+														<a id="navbarDropdownMenuLink" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															<input type="text" readonly value="{{selectedThickness}}"
+																class="form-control" placeholder="Debljina polimera"
+																style="background-color: transparent !important;">
+														</a>
+														<div class="dropdown-menu"
+															aria-labelledby="navbarDropdownMenuLink">
+															<a class="dropdown-item" (click)="getThickness(t)"
+																*ngFor="let t of thicknesses">{{t}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-6 pr-1">
+													<div class="form-group has-default">
+														<input type="number" class="form-control"
+															placeholder="Ukupan broj separacija">
+													</div>
+												</div>
+												<div class="col-md-6 pl-5">
+													<div class="form-group">
+														<label
+															class="d-flex align-items-center justify-content-center m-top">Vrsta
+															štampe</label>
+														<a id="navbarDropdownMenuLink" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															<input type="text" readonly value="{{selectedPrintingType}}"
+																class="form-control" placeholder="Vrsta štampe"
+																style="background-color: transparent !important;">
+														</a>
+														<div class="dropdown-menu"
+															aria-labelledby="navbarDropdownMenuLink">
+															<a class="dropdown-item" (click)="getPrintingType(p)"
+																*ngFor="let p of printingTypes">{{p}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+										<ul class="pager wizard list-type d-flex flex-row-reverse position-f"
+											role="tablist">
 											<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
 													(click)="nextStep2()" role="tab" data-toggle="tab">Dalje</button>
 											</li>
@@ -170,7 +234,6 @@
 										</ul>
 									</div>
 								</div>
-
 							</div>
 							<!--		STEP 3		-->
 							<div class="tab-pane" id="tab3" *ngIf="step3">
@@ -190,19 +253,28 @@
 										</li>
 									</ul>
 								</nav>
-
-								3
-								<div class="row align-items-end">
-									<div class="col align-self-end">
-										<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+								<div class="card fixed-height">
+									<div class="card-header card-header-primary">
+										<h3 class="card-title">Učitajte sve fajlove</h3>
+									</div>
+									<div class="card-body">
+										<div class="pTopDown-10">
+											<label class="pr-5 pt-5" for="inputGroupFile02">Učitajte sve fajlove</label>
+											<input type="file" multiple class="form-control" id="inputGroupFile02"
+												placeholder="Učitajte sve fajlove">
+										</div>
+										<ul class="pager wizard list-type d-flex flex-row-reverse position-f"
+											role="tablist">
 											<li class="next"><button class="btn btn-primary btn-round" href="#tab3"
 													(click)="nextStep3()" role="tab" data-toggle="tab">Dalje</button>
 											</li>
 											<li class="previous"><button class="btn btn-primary btn-round" href="#tab1"
-													role="tab" data-toggle="tab">Nazad</button></li>
+													(click)="setSteps(false, true, false, false)" role="tab"
+													data-toggle="tab">Nazad</button></li>
 										</ul>
 									</div>
 								</div>
+
 							</div>
 							<!--		STEP 4		-->
 							<div class="tab-pane" id="tab4" *ngIf="step4">
@@ -229,11 +301,12 @@
 								4
 								<div class="row align-items-end">
 									<div class="col align-self-end">
-										<ul class="pager wizard list-type d-flex flex-row-reverse" role="tablist">
+										<ul class="pager wizard list-type d-flex flex-row-reverse pr-5" role="tablist">
 											<li class="next"><button class="btn btn-primary btn-round" href=""
 													role="tab" data-toggle="tab">Završi</button></li>
 											<li class="previous"><button class="btn btn-primary btn-round" href="#tab1"
-													role="tab" data-toggle="tab">Nazad</button></li>
+													(click)="setSteps(false, false, true, false)" role="tab"
+													data-toggle="tab">Nazad</button></li>
 										</ul>
 									</div>
 								</div>

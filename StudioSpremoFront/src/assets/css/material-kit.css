@@ -12,6 +12,24 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+ .fixed-height {
+  height: 500px;
+}
+
+.p-20 {
+  padding: 20%;
+}
+
+.pTopDown-10 {
+  padding-top: 10% !important;
+  padding-bottom: 10% !important;
+}
+
+.position-f {
+  position: absolute;
+  right: 2%;
+  bottom: 1%;
+}
 
  .form-width {
   width: 700px;
@@ -3624,7 +3642,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #212529 !important;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3732,7 +3750,7 @@ tbody.collapse.show {
   padding: 0.625rem 1.25rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #212529 !important;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3750,7 +3768,7 @@ tbody.collapse.show {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #9c27b0;
+  background-color: #212529;
 }
 
 .dropdown-item.disabled,
@@ -15172,10 +15190,10 @@ textarea {
 .pagination>.page-item.active>span,
 .pagination>.page-item.active>span:focus,
 .pagination>.page-item.active>span:hover {
-  background-color: #9c27b0;
-  border-color: #9c27b0;
+  background-color: rgb(33,33,33);
+  border-color: rgb(33,33,33);
   color: #ffffff;
-  box-shadow: 0 4px 5px 0 rgba(156, 39, 176, 0.14), 0 1px 10px 0 rgba(156, 39, 176, 0.12), 0 2px 4px -1px rgba(156, 39, 176, 0.2);
+  box-shadow: 0 4px 5px 0 rgba(33,33,33, 0.14), 0 1px 10px 0 rgba(33,33,33, 0.12), 0 2px 4px -1px rgba(33,33,33, 0.2);
 }
 
 .pagination.pagination-info>.page-item.active>a,
@@ -16011,8 +16029,8 @@ h2.title {
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a:active {
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
-  background-color: #9c27b0;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(33, 37, 41, 0.4);
+  background-color: #212529;
   color: #fff !important;
 }
 
@@ -17186,11 +17204,19 @@ footer .pull-center {
   display: none !important;
 }
 
+/* OLD PRIMARY COLOR */
+.card .card-header-dark,
+.card.bg-dark,
+.card.card-rotate.bg-dark .front,
+.card.card-rotate.bg-dark .back {
+  background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+
 .card .card-header-primary,
 .card.bg-primary,
 .card.card-rotate.bg-primary .front,
 .card.card-rotate.bg-primary .back {
-  background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+  background: linear-gradient(60deg, #343a40, #283446);
 }
 
 .card .card-header-info,
@@ -17228,8 +17254,14 @@ footer .pull-center {
   background: linear-gradient(60deg, #ec407a, #c2185b);
 }
 
-.card .card-header-primary {
+/* OLD PRIMARY COLOR */
+.card .card-header-dark {
   box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(156, 39, 176, 0.6);
+  
+}
+
+.card .card-header-primary {
+  box-shadow: 0 5px 20px 0px rgba(52, 58, 64, 1), 0 13px 24px -11px rgba(40, 52, 70, 1);
 }
 
 .card .card-header-danger {

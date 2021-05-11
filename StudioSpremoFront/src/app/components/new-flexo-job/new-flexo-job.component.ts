@@ -16,6 +16,10 @@ export class NewFlexoJobComponent implements OnInit {
   production: boolean = false;
   nextStep: boolean = true;
   alert: boolean = false;
+  selectedThickness: string = "";
+  thicknesses: Array<string> = ['1.18', '2.34', '5.32'];
+  selectedPrintingType: string = "";
+  printingTypes: Array<string> = ['Unutrašnja', 'Spoljašnja'];
   constructor(public formBuilder: FormBuilder) {
   }
 
@@ -62,5 +66,13 @@ export class NewFlexoJobComponent implements OnInit {
 
   nextStep3(): void {
     this.setSteps(false, false, false, true);
+  }
+
+  getThickness(t: string): void {
+    this.selectedThickness = t;
+  }
+
+  getPrintingType(p: string): void {
+    this.selectedPrintingType = p;
   }
 }
