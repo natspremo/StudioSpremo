@@ -298,16 +298,30 @@
 									</ul>
 								</nav>
 
-								4
-								<div class="row align-items-end">
-									<div class="col align-self-end">
-										<ul class="pager wizard list-type d-flex flex-row-reverse pr-5" role="tablist">
-											<li class="next"><button class="btn btn-primary btn-round" href=""
-													role="tab" data-toggle="tab">Završi</button></li>
-											<li class="previous"><button class="btn btn-primary btn-round" href="#tab1"
-													(click)="setSteps(false, false, true, false)" role="tab"
-													data-toggle="tab">Nazad</button></li>
-										</ul>
+								<div class="card fixed-height">
+									<div class="card-header card-header-primary">
+										<h3 class="card-title">Dodatne napomene</h3>
+									</div>
+									<div class="card-body">
+										<div class="pTopDown-10">
+											<div class="form-group bmd-form-group">
+												<label class="bmd-label-floating napomena"> Upišite poruku...</label>
+												<textarea class="form-control" rows="5"></textarea>
+											</div>
+										</div>
+									</div>
+
+									<div class="row align-items-end">
+										<div class="col align-self-end">
+											<ul class="pager wizard list-type d-flex flex-row-reverse position-zavrsi"
+												role="tablist">
+												<li class="next"><button class="btn btn-primary btn-round" href=""
+														role="tab" data-toggle="tab">Završi</button></li>
+												<li class="previous"><button class="btn btn-primary btn-round"
+														href="#tab1" (click)="setSteps(false, false, true, false)"
+														role="tab" data-toggle="tab">Nazad</button></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>

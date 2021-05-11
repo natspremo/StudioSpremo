@@ -31,6 +31,12 @@
   bottom: 1%;
 }
 
+.position-zavrsi {
+  position: absolute;
+  right: 3%;
+  bottom: 1%;
+}
+
  .form-width {
   width: 700px;
  }
