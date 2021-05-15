@@ -17,9 +17,13 @@ export class NewFlexoJobComponent implements OnInit {
   nextStep: boolean = true;
   alert: boolean = false;
   selectedThickness: string = "";
+  selectedOptionMontage: string = "";
+  selectedOptionShortening: string = "";
+  selectedOptionOverprint: string = "";
   thicknesses: Array<string> = ['1.18', '2.34', '5.32'];
   selectedPrintingType: string = "";
   printingTypes: Array<string> = ['Unutrašnja', 'Spoljašnja'];
+  options: Array<string> = ['Potrebno uraditi', 'Nije potrebno uraditi'];
   constructor(public formBuilder: FormBuilder) {
   }
 
@@ -74,5 +78,17 @@ export class NewFlexoJobComponent implements OnInit {
 
   getPrintingType(p: string): void {
     this.selectedPrintingType = p;
+  }
+
+  getOptionMontage(o: string): void {
+    this.selectedOptionMontage = o;
+  }
+
+  getOptionShortening(o: string): void {
+    this.selectedOptionShortening = o;
+  }
+
+  getOptionOverprint(o: string): void {
+    this.selectedOptionOverprint = o;
   }
 }

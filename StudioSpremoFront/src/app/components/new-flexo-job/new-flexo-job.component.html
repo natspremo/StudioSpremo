@@ -118,36 +118,18 @@
 												</div>
 												<div class="col-md-6 pl-5">
 													<div class="form-group">
-														<div class="row">
-															<div class="col align-self-center">
-																<label class="mb-0">
-																	Skraćenje u fajlu:
-																</label>
-															</div>
-															<div class="col">
-																<div class="form-check form-check-radio">
-																	<label class="form-check-label font10 mb-0">
-																		<input class="form-check-input font-weight-bold"
-																			(change)="radioChange($event)" type="radio" [checked]="prepress"
-																			name="inlineRadioOptions" id="inlineRadio1" value="prepress">
-																		Potrebno
-																		<span class="circle">
-																			<span class="check"></span>
-																		</span>
-																	</label>
-																</div>
-																<div class="form-check form-check-radio mt-0">
-																	<label class="form-check-label font10">
-																		<input class="form-check-input" (change)="radioChange($event)"
-																			[checked]="production" type="radio" name="inlineRadioOptions"
-																			id="inlineRadio2" value="production">
-																		Nije potrebno
-																		<span class="circle">
-																			<span class="check"></span>
-																		</span>
-																	</label>
-																</div>
-															</div>
+														<label
+															class="d-flex align-items-center justify-content-center m-top">Skraćenje u fajlu</label>
+														<a id="navbarDropdownMenuLink" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															<input type="text" readonly value="{{selectedOptionShortening}}"
+																class="form-control" placeholder="Skraćenje u fajlu"
+																style="background-color: transparent !important;">
+														</a>
+														<div class="dropdown-menu"
+															aria-labelledby="navbarDropdownMenuLink">
+															<a class="dropdown-item" (click)="getOptionShortening(o)"
+																*ngFor="let o of options">{{o}}</a>
 														</div>
 													</div>
 												</div>
@@ -162,12 +144,18 @@
 												</div>
 												<div class="col-md-6 pl-5">
 													<div class="form-group">
-														<div class="togglebutton">
-															<label>
-																<input type="checkbox">
-																<span class="toggle"></span>
-																Montaža
-															</label>
+														<label
+															class="d-flex align-items-center justify-content-center m-top">Montaža</label>
+														<a id="navbarDropdownMenuLink" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															<input type="text" readonly value="{{selectedOptionMontage}}"
+																class="form-control" placeholder="Montaža"
+																style="background-color: transparent !important;">
+														</a>
+														<div class="dropdown-menu"
+															aria-labelledby="navbarDropdownMenuLink">
+															<a class="dropdown-item" (click)="getOptionMontage(o)"
+																*ngFor="let o of options">{{o}}</a>
 														</div>
 													</div>
 												</div>
@@ -182,12 +170,18 @@
 												</div>
 												<div class="col-md-6 pl-5">
 													<div class="form-group">
-														<div class="togglebutton">
-															<label>
-																<input type="checkbox">
-																<span class="toggle"></span>
-																Overprint black
-															</label>
+														<label
+															class="d-flex align-items-center justify-content-center m-top">Overprint crne</label>
+														<a id="navbarDropdownMenuLink" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															<input type="text" readonly value="{{selectedOptionOverprint}}"
+																class="form-control" placeholder="Overprint crne"
+																style="background-color: transparent !important;">
+														</a>
+														<div class="dropdown-menu"
+															aria-labelledby="navbarDropdownMenuLink">
+															<a class="dropdown-item" (click)="getOptionOverprint(o)"
+																*ngFor="let o of options">{{o}}</a>
 														</div>
 													</div>
 												</div>
